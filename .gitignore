@@ -1,0 +1,9 @@
+# We don't want most of .config
+# Start by ignoring everything
+*
+!*/
+
+# Whitelist
+!.gitignore
+!alacritty/alacritty.yml
+!starship.toml
