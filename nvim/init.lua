@@ -1,5 +1,5 @@
 -- Set the leader
-vim.g.mapleader=','
+vim.g.mapleader=' '
 
 require('impatient')
 

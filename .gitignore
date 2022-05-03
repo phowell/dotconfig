@@ -7,4 +7,5 @@
 !.gitignore
 !alacritty/alacritty.yml
 !starship.toml
-!nvim/**
+!nvim/init.lua
+!nvim/lua/**
