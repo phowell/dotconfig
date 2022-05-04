@@ -15,7 +15,6 @@ vim.g.gruvbox_italics = true
 vim.cmd('colorscheme gruvbox8')
 vim.opt.termguicolors = true
 vim.cmd 'hi Normal ctermbg=NONE guibg=NONE'
---vim.cmd 'highlight NonText ctermbg=NONE'
 
 -- Neovide
 vim.opt.guifont = 'FuraCode Nerd Font Mono:h18'
@@ -52,7 +51,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Make indenting make sense
-local indent = 4
+local indent = 2
 vim.opt.expandtab = false
 vim.opt.shiftwidth = indent
 vim.opt.tabstop = indent

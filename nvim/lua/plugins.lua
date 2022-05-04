@@ -16,7 +16,7 @@ require('packer').startup(function(use)
 	use {'junegunn/limelight.vim'}
 	use {
 		'vimwiki/vimwiki',
-		config = function()
+		setup = function()
 			vim.g.vimwiki_list = {
 				{
 					path = '~/wiki',
@@ -34,7 +34,7 @@ require('packer').startup(function(use)
 	}
 	use {'blindFS/vim-taskwarrior'}
 	use {'tools-life/taskwiki',
-		config = function()
+		setup = function()
 			vim.g.taskwiki_taskrc_location = '~/.config/task/taskrc'
 			vim.g.taskwiki_data_location = '~/.local/share/task'
 			vim.g.taskwiki_markup_syntax = 'markdown'
@@ -46,6 +46,11 @@ require('packer').startup(function(use)
 	use {'rust-lang/rust.vim'}
 	use {'folke/lua-dev.nvim'}
 	use {'ckipp01/stylua-nvim'}
+	use {'jmcantrell/vim-virtualenv',
+		setup = function()
+			vim.g.virtualenv_directory= '~/.venv'
+		end
+	}
 
 	use {
 		-- LSP
