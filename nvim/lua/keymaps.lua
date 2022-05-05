@@ -7,7 +7,7 @@ wk.register({
 		b = {'<cmd>Telescope buffers<cr>', 'Find Buffer'},
 		r = {'<cmd>Telescope oldfiles<cr>', 'Open Recent File'},
 		g = {'<cmd>Telescope live-grep<cr>', 'Find by grep'},
-		p = {'<cmd>Telescope projects<cr>', 'Find Projects'},
+		p = {'<cmd>Telescope project<cr>', 'Find Projects'},
 	},
 
 	w = {},

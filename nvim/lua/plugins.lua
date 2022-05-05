@@ -75,11 +75,23 @@ require('packer').startup(function(use)
 	}
 	use {'p00f/nvim-ts-rainbow', requires = 'treesitter'}
 
-	-- Some nice quality of life and fun stuff
+
+	-- Telescope & friends
 	use {
 		'nvim-telescope/telescope.nvim',
+		as = 'telescope',
 		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 	}
+	use {'nvim-telescope/telescope-project.nvim',
+		requires = 'telescope',
+		config = {function() require('telescope').load_extension('project') end},
+	}
+
+
+
+
+
+	-- Some nice quality of life and fun stuff
 	use {'windwp/nvim-autopairs', config = {function() require('nvim-autopairs').setup() end}}
 	use {
 		'folke/trouble.nvim',
@@ -92,7 +104,7 @@ require('packer').startup(function(use)
 		config = {function() require('which-key').setup() end},
 	}
 
-	-- Lualine
+	-- Status Line
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = 'devicons',
