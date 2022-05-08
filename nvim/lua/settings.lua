@@ -12,17 +12,20 @@ end
 -- Basic Look And Feel
 vim.g.gruvbox_bold = true
 vim.g.gruvbox_italics = true
-vim.cmd('colorscheme gruvbox8')
+-- vim.cmd('colorscheme gruvbox8')
+vim.cmd('colorscheme onenord')
 vim.opt.termguicolors = true
 vim.cmd 'hi Normal ctermbg=NONE guibg=NONE'
 
 -- Neovide
-vim.opt.guifont = 'FuraCode Nerd Font Mono:h18'
-vim.g.neovide_cursor_vfx_mode = "railgun"
-vim.g.neovide_transparency = 0.95
+vim.opt.guifont = 'FiraCode Nerd Font Mono:h18'
+vim.api.nvim_set_var('neovide_cursor_vfx_mode', 'railgun')
+-- vim.g.neovide_cursor_vfx_mode = "railgun"
+vim.g.neovide_transparency = 0.9
 vim.g.neovide_cursor_antialiasing= "true"
 vim.g.neovide_cursor_vfx_particle_lifetime = 1.5
 vim.g.neovide_cursor_vfx_particle_density = 7.0
+vim.g.neovide_remember_window_size = true
 
 -- General Settings
 -- vim.g.nvim_set_option('encoding', 'UTF-8')

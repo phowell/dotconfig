@@ -8,7 +8,8 @@ require('packer').startup(function(use)
 	use {'lewis6991/impatient.nvim'}
 
 	-- Prettiness
-	use 'lifepillar/vim-gruvbox8'
+	use {'lifepillar/vim-gruvbox8'}
+	use {'rmehri01/onenord.nvim'}
 	use {'kyazdani42/nvim-web-devicons', as ='devicons'}
 
 	-- Sometimes I have to write things that aren't code
@@ -67,8 +68,7 @@ require('packer').startup(function(use)
 	}
 
 	-- Treesitter is nice
-	use {
-		'nvim-treesitter/nvim-treesitter',
+	use {'nvim-treesitter/nvim-treesitter',
 		as ='treesitter',
 		run = ':TSUpdate',
 		config = {function() require('config.treesitter') end},
@@ -77,8 +77,7 @@ require('packer').startup(function(use)
 
 
 	-- Telescope & friends
-	use {
-		'nvim-telescope/telescope.nvim',
+	use {'nvim-telescope/telescope.nvim',
 		as = 'telescope',
 		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
 	}
@@ -88,13 +87,10 @@ require('packer').startup(function(use)
 	}
 
 
-
-
-
 	-- Some nice quality of life and fun stuff
 	use {'windwp/nvim-autopairs', config = {function() require('nvim-autopairs').setup() end}}
-	use {
-		'folke/trouble.nvim',
+	use {'lewis6991/gitsigns.nvim', config = {function() require('gitsigns').setup() end}}
+	use {'folke/trouble.nvim',
 		requires = 'devicons',
 		config = {function() require('trouble').setup() end},
 	}
@@ -104,19 +100,15 @@ require('packer').startup(function(use)
 		config = {function() require('which-key').setup() end},
 	}
 
-	-- Status Line
-	use {
-		'nvim-lualine/lualine.nvim',
+	use {'akinsho/bufferline.nvim',
+		tag = 'v2.*',
+		requires = 'devicons',
+		config = { function() require('config.ui.buffer') end},
+	}
+	use {'nvim-lualine/lualine.nvim',
 		requires = 'devicons',
 		opt = false,
-		config = function()
-			require('lualine').setup({
-				options = {
-					globalstatus = true,
-					theme = 'gruvbox',
-				}
-			})
-		end
+		config = { function() require('config.ui.statusline') end},
 	}
 end)
 
