@@ -1,27 +1,27 @@
 require('nvim-lsp-installer').setup({
 	ensure_installed = {
-		'ansiblels',		-- Ansible
-		'dockerls',			-- Docker
+		'ansiblels',						-- Ansible
+		'dockerls',							-- Docker
 
-		'html', 'cssls',	-- HTML, CSS
-		'tsserver',			-- Javascript, Typescrypt
+		'html', 'cssls',				-- HTML, CSS
+		'tsserver',							-- Javascript, Typescrypt
 
-		'jsonls',			-- JSON
-		'taplo', 'yamlls',	-- TOML, YAML
-		--'lemminx',		-- XML
-		--'sqlls',			-- SQL
+		'jsonls', 'remark_ls',	-- JSON, Markdown
+		'yamlls',			-- YAML
+		--'lemminx',						-- XML
+		--'sqlls',							-- SQL
 
-		'sumneko_lua',		-- Lua
-		'pyright',			-- Python
-		'rust-analyzer',	-- Rust
-		--'texlab',			-- LaTeX
-		--'vimls',			-- Vimscript
-		--'bashls',			-- Bash
-		--'clangd',			-- C, C++
-		--'gopls',			-- Go
-		--'intelephense',	-- PHP
-		--'jdls',			-- Java
-		--'solargraph',		-- Ruby
+		'sumneko_lua',					-- Lua
+		'pyright',							-- Python
+		'rust-analyzer',				-- Rust
+		--'texlab',							-- LaTeX
+		--'vimls',							-- Vimscript
+		--'bashls',							-- Bash
+		--'clangd',							-- C, C++
+		--'gopls',							-- Go
+		--'intelephense',				-- PHP
+		--'jdls',								-- Java
+		--'solargraph',					-- Ruby
 	},
 	automatic_installation = true,
 	ui = {
@@ -43,3 +43,4 @@ require('config.lsp.data')
 require('config.lsp.python')
 require('config.lsp.rust')
 require('config.lsp.webdev')
+require('config.lsp.data')
