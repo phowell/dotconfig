@@ -50,8 +50,8 @@ wk.register({
 		name = 'Wiki',
 		w = {'<Plug>VimwikiIndex', 'Wiki Index'},
 		d = {
-			i={'<cmd>VimwikiDiaryIndex', 'Wiki Diary Index'},
-			n={'<cmd>VimwikiMakeDiaryNote', 'Wiki Diary Today'},
+			i={'<Plug>VimwikiDiaryIndex', 'Wiki Diary Index'},
+			n={'<Plug>VimwikiMakeDiaryNote', 'Wiki Diary Today'},
 		},
 	}
 }, {prefix = '<leader>'})

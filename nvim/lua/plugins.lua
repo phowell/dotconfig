@@ -9,7 +9,10 @@ require('packer').startup(function(use)
 
 	-- Prettiness
 	use {'lifepillar/vim-gruvbox8'}
-	use {'rmehri01/onenord.nvim'}
+	use {'rmehri01/onenord.nvim',
+		config = {function() require('config.theme') end},
+	}
+
 	use {'kyazdani42/nvim-web-devicons', as ='devicons'}
 
 	-- Sometimes I have to write things that aren't code
