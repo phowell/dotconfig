@@ -6,7 +6,7 @@ require('nvim-lsp-installer').setup({
 		'html', 'cssls',				-- HTML, CSS
 		'tsserver',							-- Javascript, Typescrypt
 
-		'jsonls', 'remark_ls',	-- JSON, Markdown
+		'jsonls', 'prosemd_lsp',	-- JSON, Markdown
 		'yamlls',			-- YAML
 		--'lemminx',						-- XML
 		--'sqlls',							-- SQL

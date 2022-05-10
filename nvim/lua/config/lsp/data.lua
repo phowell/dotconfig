@@ -5,4 +5,4 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lsp['taplo'].setup({capabilities = capabilities})
 
-lsp['remark_ls'].setup({capabilities = capabilities})
+lsp['prosemd_lsp'].setup({capabilities = capabilities})

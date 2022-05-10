@@ -1,14 +1,5 @@
 -- General Settings for NeoVim
 
--- Utils
-local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
-
-local function opt(scope, key, value)
-	scopes[scope][key] = value
-	if scope ~= 'o' then scopes['o'][key] = value end
-end
-
-
 -- Basic Look And Feel
 vim.g.gruvbox_bold = true
 vim.g.gruvbox_italics = true
@@ -39,13 +30,13 @@ vim.g.syntax_enable = true
 vim.g.mouse = 'a'
 vim.g.ruler = true
 vim.g.hidden = true
-opt('o', 'cursorline', true)
-opt('w', 'list', true)
+vim.opt.cursorline = true
+vim.opt.list = true
 vim.api.nvim_set_option('listchars', 'tab:▸ ,eol:¬')
-
+vim.opt.shortmess:append 'c'
 
 vim.opt.number = true
-vim.opt.signcolumn = 'yes' 
+vim.opt.signcolumn = 'yes'
 
 vim.o.splitbelow = true
 vim.o.splitright = true

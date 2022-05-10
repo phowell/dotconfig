@@ -7,7 +7,16 @@ cmp.setup({
 		end,
 	},
 	window = {},
-	mapping = {},
+	completion = {
+		completeopt = "menu,menuone,noinsert",
+	},
+	mapping = {
+		['<C-d>'] = cmp.mapping.scroll_docs(-4),
+		['<C-f>'] = cmp.mapping.scroll_docs(4),
+		['<C-Space>'] = cmp.mapping.complete({}),
+		['<C-q>'] = cmp.mapping.abort(),
+		['<CR>'] = cmp.mapping.confirm({select = true}),
+	},
 	sources = cmp.config.sources({
 		{name = 'nvim_lsp'},
 		{name = 'luasnip'},
