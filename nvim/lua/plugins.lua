@@ -97,7 +97,17 @@ require('packer').startup(function(use)
 	use {
 		'folke/which-key.nvim',
 		requires = 'devicons',
-		config = {function() require('which-key').setup() end},
+		config = {
+			function()
+				require('which-key').setup({
+					plugins = {
+						spelling = {
+							enabled = true,
+						}
+					}
+				})
+			end
+		},
 	}
 
 	use {'akinsho/bufferline.nvim',
