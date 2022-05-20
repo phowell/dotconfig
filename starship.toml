@@ -10,7 +10,7 @@ ssh_only = false
 [custom.task_count_pending]
 command = "task count rc.gc=off rc.verbose=nothing status:pending"
 when = "which task"
-symbol = " "
+symbol = "  "
 description = "Count of pending Taskwarrior tasks"
 
 [python]
