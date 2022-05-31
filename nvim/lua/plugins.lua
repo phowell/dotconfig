@@ -44,6 +44,7 @@ require('packer').startup(function(use)
 			vim.g.taskwiki_markup_syntax = 'markdown'
 		end
 	}
+	use {'michal-h21/vimwiki-sync'}
 
 	-- Language specific plugins
 	use {'simrat39/rust-tools.nvim'}
