@@ -62,6 +62,7 @@ require('packer').startup(function(use)
 		'neovim/nvim-lspconfig',
 		'williamboman/nvim-lsp-installer',
 		'nvim-lua/lsp-status.nvim',
+		'jose-elias-alvarez/null-ls.nvim',
 		-- Completion
 		'hrsh7th/nvim-cmp', 'hrsh7th/cmp-nvim-lsp',
 		'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
