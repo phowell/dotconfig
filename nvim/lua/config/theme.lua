@@ -1,3 +1,23 @@
+-- Catppuccin
+require('catppuccin').setup({
+	options = {
+		transparent_background = true,
+		term_colors = false,
+		styles = {
+			comments = 'italic',
+			conditionals = 'bold'
+		},
+		integrations = {
+			treesitter = true,
+			lsp_trouble = true,
+			which_key = true,
+			ts_rainbow = true,
+		},
+	}
+})
+
+-- NordOne
+--[[
 local _M = {}
 
 _M.colors = {
@@ -96,3 +116,4 @@ _M.init = function()
 end
 
 return _M
+--]]

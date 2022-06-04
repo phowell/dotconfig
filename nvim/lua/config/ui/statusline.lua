@@ -2,6 +2,6 @@
 require('lualine').setup({
 	options = {
 		globalstatus = true,
-		theme = 'onenord',
+		theme = 'catppuccin',
 	}
 })

@@ -9,7 +9,9 @@ require('packer').startup(function(use)
 
 	-- Prettiness
 	use {'lifepillar/vim-gruvbox8'}
-	use {'rmehri01/onenord.nvim',
+	use {'rmehri01/onenord.nvim',}
+	use {'catppuccin/nvim',
+		as = 'catpuccin',
 		config = {function() require('config.theme') end},
 	}
 
