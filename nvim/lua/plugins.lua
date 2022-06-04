@@ -46,6 +46,7 @@ require('packer').startup(function(use)
 			vim.g.taskwiki_markup_syntax = 'markdown'
 		end
 	}
+	use {'michal-h21/vimwiki-sync'}
 
 	-- Language specific plugins
 	use {'simrat39/rust-tools.nvim'}
@@ -63,6 +64,7 @@ require('packer').startup(function(use)
 		'neovim/nvim-lspconfig',
 		'williamboman/nvim-lsp-installer',
 		'nvim-lua/lsp-status.nvim',
+		'jose-elias-alvarez/null-ls.nvim',
 		-- Completion
 		'hrsh7th/nvim-cmp', 'hrsh7th/cmp-nvim-lsp',
 		'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',

@@ -6,7 +6,7 @@ require('nvim-lsp-installer').setup({
 		'html', 'cssls',				-- HTML, CSS
 		'tsserver',							-- Javascript, Typescrypt
 
-		'jsonls', 'prosemd_lsp',	-- JSON, Markdown
+		'jsonls', --'prosemd_lsp',	-- JSON, Markdown
 		'yamlls',			-- YAML
 		--'lemminx',						-- XML
 		--'sqlls',							-- SQL
@@ -36,10 +36,11 @@ require('nvim-lsp-installer').setup({
 
 require('config.lsp.cmp')
 require('config.lsp.lua')
+require('config.lsp.null')
 
 
 require('config.lsp.devops')
-require('config.lsp.data')
+-- require('config.lsp.data')
 require('config.lsp.python')
 require('config.lsp.rust')
 require('config.lsp.webdev')
