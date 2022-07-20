@@ -15,3 +15,18 @@ description = "Count of pending Taskwarrior tasks"
 
 [python]
 symbol = " "
+
+[c]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[git_branch]
+symbol = " "
+
+[package]
+symbol = " "
+
+[rust]
+symbol = " "

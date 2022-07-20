@@ -1,8 +1,31 @@
--- I'm using Packer for package management
-vim.cmd [[packadd packer.nvim]]
+local fn = vim.fn
+-- Automatically install packer on initial startup
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+	Packer_Bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+	print "---------------------------------------------------------"
+	print "Press Enter to install packer and plugins."
+	print "After install -- close and reopen Neovim to load configs!"
+	print "---------------------------------------------------------"
+	vim.cmd [[packadd packer.nvim]]
+end
 
-require('packer').startup(function(use)
+-- Autocommand to reload neovim when you save plugins.lua
+vim.cmd [[
+	augroup packer_user_config
+		autocmd!
+		autocmd BufWritePost plugins.lua source <afile> | PackerSync
+	augroup end
+]]
 
+-- Use a protected call
+local present, packer = pcall(require, "packer")
+
+if not present then
+	return
+end
+
+packer.startup(function(use)
 	-- Bootstrap
 	use {'wbthomason/packer.nvim', opt = true}
 	use {'lewis6991/impatient.nvim'}
@@ -127,6 +150,12 @@ require('packer').startup(function(use)
 		opt = false,
 		config = { function() require('config.ui.statusline') end},
 	}
+
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if Packer_Bootstrap then
+		require('packer').sync()
+	end
 end)
 
 require('config.lsp')
